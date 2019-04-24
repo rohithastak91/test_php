@@ -42,10 +42,10 @@
     $(document).ready(function(){
         
         var pageURL = $(location).attr("href");
-            if(pageURL != 'http://172.10.1.5:8097/Inchora/cron/test.php'){
+            if(pageURL != 'test.php'){
                 $.ajax({
                     type:'POST',  
-                    url: 'http://172.10.1.5:8097/Inchora/cron/function.php',
+                    url: 'function.php',
                     data: {'pageURL': pageURL},
                       beforeSend: function () {
                             $(".waiting").show();
@@ -63,7 +63,7 @@
             }else{
                  $.ajax({
                         type:'POST',  
-                        url: 'http://172.10.1.5:8097/Inchora/cron/function.php',
+                        url: 'function.php',
                         data: {'flag': '1'},
                           
                         success: function (data1) {
@@ -90,7 +90,7 @@
                 var url = $('#url_id').val();
                   $.ajax({
                     type:'POST',  
-                    url: 'http://172.10.1.5:8097/Inchora/cron/function.php',
+                    url: 'function.php',
                     data: {'url': url},
                     success: function (data) {
                         // this is executed when ajax call finished well
